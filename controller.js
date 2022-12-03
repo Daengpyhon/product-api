@@ -8,6 +8,6 @@ exports.listProducts = async(req, res)=>{
     res.send(products)
   } catch (error) {
     console.log(error)
-    res.send("Server error")
+    res.status(500).send("Server error")
   }
 }
