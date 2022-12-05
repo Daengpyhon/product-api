@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
-
+app.use(bodyParser.json({limit: '20mb'}))
 
 const mongoDB = "mongodb+srv://mernapp:99199097@cluster0.dyrlanl.mongodb.net/e_com_db?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
